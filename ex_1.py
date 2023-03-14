@@ -1,5 +1,3 @@
-def main():
-    print("Hello World!")
+def hello(name):
+    print("Hello " + name)
 
-if __name__ == "__main__":
-    main()
