@@ -5,7 +5,7 @@ import unittest
 @patch('builtins.print')
 def test_hello(mock_print):
     hello("Ola")
-    mock_print.assert_called_with("Hello Ola")
+    mock_print.assert_called_with("Hello Tesss")
     hello("Zuzia")
     mock_print.assert_called_with("Hello Zuzia")
 
