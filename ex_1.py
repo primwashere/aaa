@@ -1,7 +1,7 @@
 def hello(a: str) -> str:
-    # TODO
-    return "Hello Ola"
+    return "Hello " + a
 
+# print(hello("Ola"))
 
 # assert hello("Ola") == "Hello Ola"
 # assert hello("Zuzia") == "Hello Zuzia"
