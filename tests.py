@@ -6,6 +6,8 @@ from ex_3 import policz_studentow_plec
 from ex_4 import oblicz_potega
 from ex_5 import nawiasy
 from ex_6 import para_nawiasow
+from ex_7 import wykres
+from ex_8 import funkcja_liniowa
 
 
 # from unittest.mock import patch
@@ -61,6 +63,27 @@ class TestClass(unittest.TestCase):
         self.assertTrue(para_nawiasow(tekst_2))
         self.assertFalse(para_nawiasow(tekst_3))
         self.assertFalse(para_nawiasow(tekst_4))
+
+    def test_wykres(self):
+        wykres_1 = [[2, 4], [4, 4], [6, 4]]
+        wykres_2 = [[2, 3], [4, 4], [6, 5]]
+        wykres_3 = [[2, 3], [4, 3], [5, 4]]
+        self.assertTrue(wykres(wykres_1))
+        self.assertTrue(wykres(wykres_2))
+        self.assertFalse(wykres(wykres_3))
+
+    def test_funkcja_liniowa(self):
+        punkty_1 = [[2, 4], [4, 4]]
+        punkty_2 = [[2, 3], [4, 4]]
+        punkty_3 = [[2, 3], [4, 3]]
+        punkty_4 = [[1.5, 3.8], [4.2, 2.9]]
+        self.assertTrue(funkcja_liniowa(punkty_1))
+        self.assertTrue(funkcja_liniowa(punkty_2))
+        self.assertFalse(funkcja_liniowa(punkty_3))
+        self.assertFalse(funkcja_liniowa(punkty_4))
+
+
+
 
 
 
