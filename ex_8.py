@@ -3,5 +3,5 @@
 # dla malejacej zwroc False
 
 def funkcja_liniowa(punkty) -> bool:
-    # TODO
-    return False
+    #TODO
+     return False

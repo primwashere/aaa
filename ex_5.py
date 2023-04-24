@@ -1,5 +1,7 @@
 # Oblicz liczbę nawiasów w zmiennej, zwroc: [otwierajace, zamykajace]
 
 def nawiasy(tekst: str) -> [int, int]:
-    # TODO
-    return [0, 0]
+   otwierajace = tekst.count("(")
+   zamykajace= tekst.count(")")
+   return[otwierajace, zamykajace]
+print(nawiasy("(sjbdsjaj)(shvhas))"))
