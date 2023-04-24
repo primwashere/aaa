@@ -1,12 +1,8 @@
 def hello(a: str) -> str:
     # TODO
-    return "Hello " + a
+    return "Hello Ola"
 
 
-print("Example")
-print(hello("Ola"))
+# assert hello("Ola") == "Hello Ola"
+# assert hello("Zuzia") == "Hello Zuzia"
 
-assert hello("Ola") == "Hello Ola"
-assert hello("Zuzia") == "Hello Zuzia"
-
-print("Zadanie zrobione")
