@@ -79,7 +79,7 @@ class TestClass(unittest.TestCase):
         punkty_4 = [[1.5, 3.8], [4.2, 2.9]]
         self.assertTrue(funkcja_liniowa(punkty_1))
         self.assertTrue(funkcja_liniowa(punkty_2))
-        self.assertFalse(funkcja_liniowa(punkty_3))
+        self.assertTrue(funkcja_liniowa(punkty_3))
         self.assertFalse(funkcja_liniowa(punkty_4))
 
 
