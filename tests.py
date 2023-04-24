@@ -4,6 +4,8 @@ from ex_1 import hello
 from ex_2 import policz_studentow
 from ex_3 import policz_studentow_plec
 from ex_4 import oblicz_potega
+from ex_5 import nawiasy
+from ex_6 import para_nawiasow
 
 
 # from unittest.mock import patch
@@ -39,6 +41,28 @@ class TestClass(unittest.TestCase):
         potega_2 = 3
         self.assertEqual(oblicz_potega(liczba_1, potega_1), 0.35)
         self.assertEqual(oblicz_potega(liczba_2, potega_2), 1000)
+
+    def test_nawiasy(self):
+        tekst_1 = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)))"
+        tekst_2 = "edbw(hda"
+        tekst_3 = "adgjesh(((((}}"
+        tekst_4 = "2136872bfewo9433n00m[][][][]))"
+        self.assertEqual(nawiasy(tekst_1), [4, 6])
+        self.assertEqual(nawiasy(tekst_2), [1, 0])
+        self.assertEqual(nawiasy(tekst_3), [5, 2])
+        self.assertEqual(nawiasy(tekst_4), [4, 6])
+
+    def test_para_nawiasow(self):
+        tekst_1 = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
+        tekst_2 = "edbw()hda[]"
+        tekst_3 = "adgjesh((}}"
+        tekst_4 = "2136872bfewo9433n00m{{[][][][]))"
+        self.assertTrue(para_nawiasow(tekst_1))
+        self.assertTrue(para_nawiasow(tekst_2))
+        self.assertFalse(para_nawiasow(tekst_3))
+        self.assertFalse(para_nawiasow(tekst_4))
+
+
 
 
 if __name__ == '__main__':
